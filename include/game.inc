@@ -604,8 +604,8 @@ class Game {
         } else if ($orientation == Group::$orientationVertical) {
             // find a free vertical position
             for ($x = 0; $x < $this->height - 1; $x++) {
-                if (!in_array([$x, 0], $allCoords) && !in_array([$x + 1, 0])) {
-                    $available[] = array($array([$x, 0], [$x + 1, 0]));
+                if (!in_array([$x, 0], $allCoords) && !in_array([$x + 1, 0], $allCoords)) {
+                    $available[] = array([$x, 0], [$x + 1, 0]);
                 }
             }
         }
@@ -718,7 +718,7 @@ class Game {
     public function getScore() {
         return $this->score;
     }
-    
+
     public function __toString() {
         //$ret = "aticveGroup: " . (!is_null($this->activeGroup) ? $this->activeGroup : "null") . "\n";
 

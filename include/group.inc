@@ -15,11 +15,11 @@ class Group {
 
     public function __construct($A = null, $B = null, $orientation = null) {
         if (is_null($A)) {
-            $A = new Unit();
+            $A = new Unit(0, 0);
         }
 
         if (is_null($B)) {
-            $B = new Unit();
+            $B = new Unit(0, 1);
         }
 
         $this->pos = 0;

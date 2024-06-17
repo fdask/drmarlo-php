@@ -43,7 +43,7 @@ class Unit {
     }
 
     public function getCoords() {
-        return [$horizontalPos, $verticalPos];
+        return [$this->horizontalPos, $this->verticalPos];
     }
 
     public function incrHorizontalPos() {
